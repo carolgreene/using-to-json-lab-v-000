@@ -30,10 +30,10 @@ class ProductsController < ApplicationController
     end
   end
 
-  #def data                 don't really need this anymore bc show is handling both html & json
-    #product = Product.find(params[:id])
-    #render json: product.to_json(only: [:name, :price, :description, :inventory, :id])
-  #end
+  def data                 #don't really need this anymore bc show is handling both html & json
+    product = Product.find(params[:id])
+    render json: product.to_json(only: [:name, :price, :description, :inventory, :id])
+  end
 
   private
 
